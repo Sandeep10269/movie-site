@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie[1] }}</title>
+</head>
+<body>
+    <h1>{{ movie[1] }}</h1>
+    <img src="{{ url_for('static', filename='posters/' + movie[3]) }}" alt="Poster" width="200">
+    <p>{{ movie[2] }}</p>
+    <a href="{{ url_for('download_file', filename=movie[4]) }}">Download Movie</a>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Movie List</a>
+</body>
+</html>
